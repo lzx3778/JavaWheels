@@ -3,8 +3,9 @@ package tryPack;
 import tryPack.Tr.*;
 
 public class Implements {
-	public static void main(String[] args){
-		
+	public Implements(){
+		IN in = new IN();
+		in.pr(1);
 	}
 }
 class IN implements Tr{

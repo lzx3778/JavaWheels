@@ -15,7 +15,7 @@ public class Gravity extends JFrame{
 	/**
 	 */
 	private static final long serialVersionUID = -1593319473258847596L;
-	Gravity(){
+	public Gravity(){
 		//start set title
 		this.setTitle("Gravity");
 		//end set title
@@ -25,10 +25,8 @@ public class Gravity extends JFrame{
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);
 		this.setVisible(true);
-	}
-	public static void main(String[] args){
-		Gravity DB = new Gravity();
-		DB.addWindowListener(new WindowAdapter(){
+		
+		this.addWindowListener(new WindowAdapter(){
 			@SuppressWarnings("unused")
 			public void WindowClosing(WindowEvent e){
 				System.exit(0);

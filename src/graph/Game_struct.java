@@ -7,13 +7,10 @@ import javax.swing.JPanel;
 public class Game_struct extends JFrame{
 
 	static JP jp = new JP();
-	public static void main(String[] args){
-		Game_struct w = new Game_struct();
-		w.setVisible(true);
-		w.setContentPane(jp);
-	}
 	public Game_struct(){
 		setBounds(100,100,600,600);
+		setContentPane(jp);
+		setVisible(true);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
 	

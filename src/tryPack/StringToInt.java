@@ -1,7 +1,7 @@
 package tryPack;
 
-public class StringOperation2 {
-	public static void main(String[] args){
+public class StringToInt {
+	public StringToInt(){
 		int i = 1;
 		String s = Integer.toString(i);
 		System.out.println(s);

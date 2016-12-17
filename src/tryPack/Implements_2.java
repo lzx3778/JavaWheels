@@ -3,7 +3,7 @@ package tryPack;
 import tryPack.cl.in;
 
 public class Implements_2 implements in{
-	public static void main(String[] args){
+	public Implements_2(){
 		cl c = new cl();
 		int A = c.v();
 		System.out.println(A);

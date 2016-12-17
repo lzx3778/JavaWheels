@@ -1,7 +1,7 @@
 package tryPack;
 
 public class ChangeAble {
-	public static void main(String[] args){
+	public ChangeAble(){
 		p(13);
 	}
 	static void p(Object... o){

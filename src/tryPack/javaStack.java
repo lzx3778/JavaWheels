@@ -2,7 +2,7 @@ package tryPack;
 import java.util.*;
 
 public class javaStack{
-    public static void main(String[] args) {
+    public javaStack(){
         int[] a = new int[5];
         int IN = 0;
         for(int i = 0;i < a.length;i++){

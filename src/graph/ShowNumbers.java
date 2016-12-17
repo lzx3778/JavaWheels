@@ -14,11 +14,8 @@ public class ShowNumbers extends JFrame{
 	public int Normal(int i){
 		return 230-i;
 	}
-	public static void main(String []args){
-		ShowNumbers J = new ShowNumbers();
-		J.setVisible(true);
-	}
 	public ShowNumbers(){
+		setVisible(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		setResizable(false);

@@ -11,7 +11,7 @@ public class ToHex {
 		}
 		return str;
 	}
-	public static void main(String []args){
+	public ToHex(){
 		String a = toHexString("Castiel").toUpperCase();
 		System.out.println(a);
 	}

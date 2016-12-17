@@ -1,7 +1,7 @@
 package tryPack;
 
 public class Extends {
-	public static void main(String[] args){
+	public Extends(){
 		me m = new me("Lzx");
 		m.talk();
 		m.Talk();

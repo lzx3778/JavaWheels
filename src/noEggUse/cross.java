@@ -2,7 +2,7 @@ package noEggUse;
 import java.util.*;
 
 public class cross{
-	public static void main(String[] args){
+	public cross(){
 		int[] base = new int[9];
 		String[] symbols = new String[3];
 

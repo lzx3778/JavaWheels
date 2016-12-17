@@ -1,7 +1,7 @@
 package tryPack;
 
 public class This {
-	public static void main(String[] args){
+	public This(){
 		A a = new A("d");
 		A b = new A(1);
 	}

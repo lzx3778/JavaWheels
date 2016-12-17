@@ -10,11 +10,8 @@ import javax.swing.JPanel;
 
 public class Awt extends JFrame{
 	private boolean boo = true;
-	public static void main(String[] args){
-		Awt a = new Awt();
-		a.setVisible(true);
-	}
 	public Awt(){
+		setVisible(true);
 		setBounds(50, 50, 300, 300);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		final JPanel j = new JPanel();

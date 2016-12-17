@@ -1,7 +1,7 @@
 package tryPack;
 
 public class BreakSign {
-	public static void main(String[] args){
+	public BreakSign(){
 		FOR:
 			while(true){
 				for(int i = 0;i < 10;i++){

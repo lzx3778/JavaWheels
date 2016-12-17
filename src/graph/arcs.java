@@ -7,11 +7,8 @@ import javax.swing.JComponent;
 import javax.swing.JFrame;
 
 public class arcs extends JFrame{
-	public static void main(String []args){
-		arcs J = new arcs();
-		J.setVisible(true);
-	}
 	public arcs(){
+		setVisible(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(0, 0, 800, 800);
 	}

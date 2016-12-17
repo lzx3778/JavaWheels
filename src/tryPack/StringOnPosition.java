@@ -1,7 +1,7 @@
 package tryPack;
 
-public class StringOperation {
-	public static void main(String[] args){
+public class StringOnPosition{
+	public StringOnPosition(){
 		String s = "lzx";
 		System.out.println(" " + s);
 		char[] ch = new char[s.length()];

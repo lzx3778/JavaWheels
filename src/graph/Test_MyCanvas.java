@@ -9,51 +9,49 @@ import java.awt.event.KeyListener;
 import javax.swing.event.MouseInputListener;
 
 public class Test_MyCanvas implements KeyListener, MouseInputListener {
-Canvas c;// 画布
-TextField tf;// 用于显示提示信息的文本框
-String s; // 用于存放按键信息的字符串
+Canvas c;//Canvas
+TextField tf;//show cautions
+String s; //store keys
 
 
-public static void main(String[] args) {
-// 初始化帧
-Frame frame = new Frame("Canvas");
-// 初始化画布
-Test_MyCanvas test_MyCanvas = new Test_MyCanvas();
-test_MyCanvas.c = new Canvas();
-test_MyCanvas.tf = new TextField();
+public Test_MyCanvas(){
+	//init frame
+	Frame frame = new Frame("Canvas");
+	//init canvas
+	Test_MyCanvas test_MyCanvas = new Test_MyCanvas();
+	test_MyCanvas.c = new Canvas();
+	test_MyCanvas.tf = new TextField();
 
 
-frame.add("South", test_MyCanvas.tf);
-frame.add("Center", test_MyCanvas.c);
+	frame.add("South", test_MyCanvas.tf);
+	frame.add("Center", test_MyCanvas.c);
 
 
-frame.setSize(300, 150);
+	frame.setSize(300, 150);
 
 
-test_MyCanvas.c.addMouseListener(test_MyCanvas);
-test_MyCanvas.c.addKeyListener(test_MyCanvas);
+	test_MyCanvas.c.addMouseListener(test_MyCanvas);
+	test_MyCanvas.c.addKeyListener(test_MyCanvas);
 
 
-frame.setVisible(true);
-
+	frame.setVisible(true);
 
 }
 
-
-// 按键按下
+//KeyPressed
 public void keyPressed(KeyEvent e) {
 
 
 }
 
 
-// 按键抬起
+//keyReleased
 public void keyReleased(KeyEvent e) {
 tf.setText("keyReleased");
 }
 
 
-// 响应键盘事件
+//answer keyboard event
 public void keyTyped(KeyEvent e) {
 tf.setText("keyTyped");
 s += e.getKeyChar();
@@ -61,10 +59,10 @@ c.getGraphics().drawString(s, 0, 20);
 }
 
 
-// 鼠标点击
+//mouse click
 public void mouseClicked(java.awt.event.MouseEvent e) {
 tf.setText("mouseClicked");
-// 画布取得焦点
+//canvas get focus
 c.requestFocus();
 }
 
