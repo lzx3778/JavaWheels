@@ -25,7 +25,7 @@ public class Wave extends JFrame implements Runnable{
 		super.paint(g);
 		for(int i = 0;i < BlockAmount;i++){
 //			(block position, block height(i:about white spaces
-			g.drawRect(i + 20, ((int)(Math.sin((Time + i)/10)*1000))/80 + 50, 0, 0);
+			g.drawRect(i*2 + 10, ((int)(Math.sin((Time + i)/10)*100000))/5000 + 60, 0, 0);
 		}
 		
 	}
