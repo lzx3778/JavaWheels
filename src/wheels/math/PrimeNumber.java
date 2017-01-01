@@ -6,26 +6,26 @@ import java.io.IOException;
 import java.io.PrintStream;
 
 public class PrimeNumber {
-	public static void main(String[] args)throws IOException{
+	public static void main(String[] args) throws IOException {
 		FileOutputStream fs = new FileOutputStream(new File("C:\\Users\\lenovo\\Desktop\\prime.txt"));
 		PrintStream p = new PrintStream(fs);
 		final int num = 1000000;
 		final int line = 10;
 		int count = 0;
 		int number = 100000;
-		while(count < num){
+		while (count < num) {
 			boolean isPrime = true;
-			for (int i = 2;i <= number / 2;i++){
-				if(number % i == 0){
+			for (int i = 2; i <= number / 2; i++) {
+				if (number % i == 0) {
 					isPrime = false;
 					break;
 				}
 			}
-			if(isPrime){
-				count ++;
-				if(count % line == 0){
+			if (isPrime) {
+				count++;
+				if (count % line == 0) {
 					p.println(number);
-				}else{
+				} else {
 					p.print(number + " ");
 				}
 			}
