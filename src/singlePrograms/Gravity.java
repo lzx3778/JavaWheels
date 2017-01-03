@@ -1,4 +1,4 @@
-package wheels.Graphic;
+package singlePrograms;
 
 import java.awt.Color;
 import java.awt.Container;
