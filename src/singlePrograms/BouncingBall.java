@@ -11,12 +11,12 @@ import java.awt.event.WindowEvent;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class Gravity extends JFrame {
+public class BouncingBall extends JFrame {
 	/**
 	 */
 	private static final long serialVersionUID = -1593319473258847596L;
 
-	public Gravity() {
+	public BouncingBall() {
 		// start set title
 		this.setTitle("Gravity");
 		// end set title
