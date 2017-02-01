@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.util.Random;
 
 /**
  * Created by lenovo on 2017-1-31.
@@ -27,11 +28,12 @@ public class Pong extends JFrame implements Runnable{
     private int B1Score;
     private int B2Score;
 
+    Random random = new Random();
+
     public Pong() {
-
-        BallCenterX = 150;
-        BallCenterY = 150;
-
+        //random initial position
+        BallCenterX = random.nextInt(300);
+        BallCenterY = 300;
 
         BallSizeX = 10;
         BallSizeY = 10;
@@ -53,6 +55,7 @@ public class Pong extends JFrame implements Runnable{
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 300, 600);
+        setResizable(false);
         addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
@@ -193,14 +196,22 @@ public class Pong extends JFrame implements Runnable{
         // draw the graph
         super.paint(g);
 
+        //random background
+        g.setColor(Color.black);
+        //fill background
+        g.fillRect(0,0,300,600);
+
+        //white obj
+        g.setColor(Color.WHITE);
+
         //draw ball
-        g.drawRect(BallCenterX - (BallSizeX / 2),BallCenterY - (BallSizeY / 2),BallSizeX,BallSizeY);
+        g.fillRect(BallCenterX - (BallSizeX / 2),BallCenterY - (BallSizeY / 2),BallSizeX,BallSizeY);
 
         //draw Board1
-        g.drawRect(B1CenterX - (BoardSizeX / 2),50,BoardSizeX,BoardSizeY);
+        g.fillRect(B1CenterX - (BoardSizeX / 2),50,BoardSizeX,BoardSizeY);
 
         //draw Board2
-        g.drawRect(B2CenterX - (BoardSizeX / 2),600 - BoardSizeY * 2,BoardSizeX,BoardSizeY);
+        g.fillRect(B2CenterX - (BoardSizeX / 2),600 - BoardSizeY * 2,BoardSizeX,BoardSizeY);
 
         //draw ScoreBoard1
         g.drawRect(10,30,20,20);
