@@ -1,10 +1,10 @@
-package tryPack;
+package tutorials;
 
 import java.util.Scanner;
 
-public class Pic {
+public class HasNext {
 
-	public static void main(String[] args) {
+	public HasNext() {
 		Scanner scanner = new Scanner(System.in);
 		while(scanner.hasNext()){
 			String string = scanner.nextLine();
