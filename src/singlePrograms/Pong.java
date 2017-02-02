@@ -77,7 +77,6 @@ public class Pong extends JFrame implements Runnable{
             }
         });
 
-
     }
 
     public static void main(String[] args) {
@@ -198,14 +197,18 @@ public class Pong extends JFrame implements Runnable{
 
         //random background
         g.setColor(Color.black);
+
         //fill background
         g.fillRect(0,0,300,600);
 
         //white obj
-        g.setColor(Color.WHITE);
+        g.setColor(new Color(random.nextInt(255),random.nextInt(255),random.nextInt(255)));
 
         //draw ball
         g.fillRect(BallCenterX - (BallSizeX / 2),BallCenterY - (BallSizeY / 2),BallSizeX,BallSizeY);
+
+        //white obj
+        g.setColor(Color.WHITE);
 
         //draw Board1
         g.fillRect(B1CenterX - (BoardSizeX / 2),50,BoardSizeX,BoardSizeY);
