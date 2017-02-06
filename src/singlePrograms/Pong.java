@@ -32,7 +32,7 @@ public class Pong extends JFrame implements Runnable{
 
     public Pong() {
         //random initial position
-        BallCenterX = random.nextInt(300);
+        BallCenterX = 25 + random.nextInt(250);
         BallCenterY = 300;
 
         BallSizeX = 10;
@@ -46,7 +46,7 @@ public class Pong extends JFrame implements Runnable{
         B1CenterX = 150;
         B2CenterX = 150;
 
-        B1SpeedX = 2;
+        B1SpeedX = 4;
         B2SpeedX = 2;
 
         B1Score = 0;
@@ -54,7 +54,7 @@ public class Pong extends JFrame implements Runnable{
 
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(100, 100, 300, 600);
+        setBounds(100, 100, 300, 610);
         setResizable(false);
         addKeyListener(new KeyAdapter() {
             @Override
@@ -192,23 +192,20 @@ public class Pong extends JFrame implements Runnable{
     }
 
     public void paint(Graphics g) {
-        // draw the graph
-        super.paint(g);
-
         //random background
         g.setColor(Color.black);
 
+        // draw the graph
+        super.paint(g);
+
         //fill background
-        g.fillRect(0,0,300,600);
-
-        //white obj
-        g.setColor(new Color(random.nextInt(255),random.nextInt(255),random.nextInt(255)));
-
-        //draw ball
-        g.fillRect(BallCenterX - (BallSizeX / 2),BallCenterY - (BallSizeY / 2),BallSizeX,BallSizeY);
+        g.fillRect(0,0,300,610);
 
         //white obj
         g.setColor(Color.WHITE);
+
+        //draw ball
+        g.fillRect(BallCenterX - (BallSizeX / 2),BallCenterY - (BallSizeY / 2),BallSizeX,BallSizeY);
 
         //draw Board1
         g.fillRect(B1CenterX - (BoardSizeX / 2),50,BoardSizeX,BoardSizeY);
@@ -220,13 +217,13 @@ public class Pong extends JFrame implements Runnable{
         g.drawRect(10,30,20,20);
 
         //draw ScoreBoard2
-        g.drawRect(10,570,20,20);
+        g.drawRect(10,580,20,20);
 
         //draw Score1
         g.drawString(""+B1Score,15,45);
 
         //draw Score2
-        g.drawString(""+B2Score,15,585);
+        g.drawString(""+B2Score,15,595);
 
     }
 
