@@ -1,4 +1,4 @@
-package tryPack;
+package singlePrograms;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,15 +10,12 @@ import java.awt.event.KeyEvent;
  */
 public class GravityEngine extends JFrame implements Runnable{
     private static double blockHeight;
-    private static FallingObject fallingObject;
 
     private static double sizeX;
     private static double sizeY;
     private static double velocity;
     private static double y;
-
     private static boolean flying;
-
     private static double bounceVelocity;
 
     public static void main(String[] args) {
@@ -28,14 +25,11 @@ public class GravityEngine extends JFrame implements Runnable{
     public GravityEngine(){
         //initialize values
         blockHeight = 700;
-
         sizeX = 30;
         sizeY = 30;
         velocity = 0;
         y = 1;
-
         flying = false;
-
         bounceVelocity = 0;
 
         //initialize the frame
@@ -73,7 +67,7 @@ public class GravityEngine extends JFrame implements Runnable{
             y += velocity;
 
             //record highest point
-            if (0.1 > velocity && velocity > -0.1 && y < blockHeight){
+            if (0.465 > velocity && velocity > -0.465 && y < blockHeight){
                 //high point to velocity equation
                 //suvat problem
                 bounceVelocity = -Math.sqrt((blockHeight - y) * 1.5);
@@ -93,7 +87,7 @@ public class GravityEngine extends JFrame implements Runnable{
 
                 //air resistance depends on the size
                 if (bounceVelocity < 0) {
-                    bounceVelocity += Math.sqrt(sizeX*sizeY) / 10;
+                    bounceVelocity += Math.sqrt(sizeX*sizeY) / 30;
                 }
 
                 //bounce up

@@ -1,24 +1,25 @@
-package tryPack;
+package GameEngine;
 
 /**
  * Created by lenovo on 2017-2-5.
  */
 public class FallingObject {
+
     private static double sizeX;
     private static double sizeY;
     private static double velocity;
-    private static double y;
+    private static double CenterY;
     private static boolean flying;
-    private static double bounceVelocity;
 
-    public FallingObject(){
+    public FallingObject(double width, double height, double initVelocity, double initCenterY){
+
         //initialize values
-        sizeX = 30;
-        sizeY = 30;
-        velocity = 0;
-        y = 1;
-        flying = false;
-        bounceVelocity = 0;
+        sizeX = width;
+        sizeY = height;
+        velocity = initVelocity;
+        CenterY = initCenterY;
+        flying = true;
+
     }
 
     public static double getSizeX() {
@@ -45,12 +46,12 @@ public class FallingObject {
         FallingObject.velocity = velocity;
     }
 
-    public static double getY() {
-        return y;
+    public static double getCenterY() {
+        return CenterY;
     }
 
-    public static void setY(double y) {
-        FallingObject.y = y;
+    public static void setCenterY(double CenterY) {
+        FallingObject.CenterY = CenterY;
     }
 
     public static boolean isFlying() {
@@ -61,11 +62,4 @@ public class FallingObject {
         FallingObject.flying = flying;
     }
 
-    public static double getBounceVelocity() {
-        return bounceVelocity;
-    }
-
-    public static void setBounceVelocity(double bounceVelocity) {
-        FallingObject.bounceVelocity = bounceVelocity;
-    }
 }

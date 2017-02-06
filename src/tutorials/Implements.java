@@ -16,5 +16,5 @@ class IN implements Tr {
 }
 
 interface Tr {
-	public void pr(int c);
+	void pr(int c);
 }

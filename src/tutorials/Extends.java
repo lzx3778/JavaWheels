@@ -3,8 +3,8 @@ package tutorials;
 public class Extends {
 	public Extends() {
 		me m = new me("Lzx");
-		m.talk();
-		m.Talk();
+		human.talk();
+		me.Talk();
 		human h = new human("lzx");
 	}
 }

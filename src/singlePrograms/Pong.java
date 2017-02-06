@@ -163,20 +163,14 @@ public class Pong extends JFrame implements Runnable{
         if((BallCenterX - BallSizeX /2) <= 0){
             return true;
         }
-        if((BallCenterX + BallSizeX /2) >= 300){
-            return true;
-        }
-        return false;
+        return (BallCenterX + BallSizeX / 2) >= 300;
     }
 
     private boolean GetBoard1CollideWall(){
         if((B1CenterX - BoardSizeX /2) <= 0){
             return true;
         }
-        if((B1CenterX + BoardSizeX /2) >= 300){
-            return true;
-        }
-        return false;
+        return (B1CenterX + BoardSizeX / 2) >= 300;
     }
 
     private boolean GetBoard2CollideWall(){

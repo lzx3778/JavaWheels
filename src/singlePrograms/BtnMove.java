@@ -52,7 +52,7 @@ public class BtnMove extends JFrame {
 		button.addMouseListener(new MouseListener() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				if (e.getButton() == e.BUTTON1) {
+				if (e.getButton() == MouseEvent.BUTTON1) {
 					b = !b;
 				}
 			}

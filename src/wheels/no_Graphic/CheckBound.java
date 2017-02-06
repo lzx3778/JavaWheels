@@ -3,23 +3,14 @@ package wheels.no_Graphic;
 public class CheckBound {
 
 	public static boolean IsBiggerThanZero(int testNumber) {
-		if (testNumber > 0) {
-			return true;
-		}
-		return false;
-	}
+        return testNumber > 0;
+    }
 
 	public static boolean IsNegetive(int testNumber) {
-		if (testNumber > 0) {
-			return false;
-		}
-		return true;
-	}
+        return testNumber <= 0;
+    }
 
 	public static boolean IsPossitive(int testNumber) {
-		if (testNumber < 0) {
-			return false;
-		}
-		return true;
-	}
+        return testNumber >= 0;
+    }
 }
