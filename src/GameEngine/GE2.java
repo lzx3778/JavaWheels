@@ -42,7 +42,7 @@ class Layout extends JPanel implements Runnable{
     private static double airResistnce;
 
     //10 < width or height < 100
-    FallingObject fallingObject = new FallingObject(10,10,0,400);
+    FallingObject fallingObject = new FallingObject(30,30,0,400);
 
     public Layout(){
         //initialize values
@@ -78,10 +78,13 @@ class Layout extends JPanel implements Runnable{
 
             //air resistance calculation
             //0 < airR < 1
-            airResistnce = FallingObject.getSizeX() / 140;
+            airResistnce = FallingObject.getSizeX() / 200;
 
             //decide if the object is in air
-            FallingObject.setFlying(FallingObject.getCenterY() < blockHeight - 22 * airResistnce - FallingObject.getSizeY() / 2);
+            //speed correction (to stop things like keep bouncing at the same height)
+            double speedCorrection = blockHeight - 220 * airResistnce / FallingObject.getSizeX() - FallingObject.getSizeY() / 2;
+            //flying decide
+            FallingObject.setFlying(FallingObject.getCenterY() < speedCorrection);
 
             //keep falling or stop
             if (FallingObject.isFlying()){
