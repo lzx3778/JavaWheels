@@ -1,4 +1,4 @@
-package interfaceExample;
+package tutorials.interfaceExample;
 
 /**
  * Created by lenovo on 2016-11-25.

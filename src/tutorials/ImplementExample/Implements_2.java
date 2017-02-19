@@ -1,8 +1,6 @@
-package tutorials;
+package tutorials.ImplementExample;
 
-import tutorials.cl.in;
-
-public class Implements_2 implements in {
+public class Implements_2 implements cl.in {
 	public Implements_2() {
 		cl c = new cl();
 		int A = c.v();

@@ -5,4 +5,4 @@
  * @author lenovo
  *
  */
-package interfaceExample;
+package tutorials.interfaceExample;

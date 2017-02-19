@@ -1,6 +1,4 @@
-package tutorials;
-
-import tutorials.Tr.*;
+package tutorials.ImplementExample;
 
 public class Implements {
 	public Implements() {
