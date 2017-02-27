@@ -59,21 +59,21 @@ public class Pong extends JFrame implements Runnable{
         addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
-                if(GetBoard2CollideWall()){
-                    return;
-                }
-                super.keyPressed(e);
-                int key = e.getKeyCode();
-                switch (key){
-                    case 65:
-                        B2CenterX -= B2SpeedX;
-                        break;
-                    case 68:
-                        B2CenterX += B2SpeedX;
-                        break;
-                    default:
-                        break;
-                }
+            if(GetBoard2CollideWall()){
+                return;
+            }
+            super.keyPressed(e);
+            int key = e.getKeyCode();
+            switch (key){
+                case 65:
+                    B2CenterX -= B2SpeedX;
+                    break;
+                case 68:
+                    B2CenterX += B2SpeedX;
+                    break;
+                default:
+                    break;
+            }
             }
         });
 
@@ -119,11 +119,19 @@ public class Pong extends JFrame implements Runnable{
     }
 
     private void AutoBoardMove(){
-
-        if (GetBoard1CollideWall()){
-            B1SpeedX = 0 - B1SpeedX;
+//
+//        if (GetBoard1CollideWall()){
+//            B1SpeedX = 0 - B1SpeedX;
+//        }
+//        B1CenterX += B1SpeedX;
+        if (B1CenterX > BallCenterX + B1SpeedX / 2) {
+            B1CenterX -= B1SpeedX;
+            return;
         }
-        B1CenterX += B1SpeedX;
+        if (B1CenterX < BallCenterX - B1SpeedX / 2) {
+            B1CenterX += B1SpeedX;
+            return;
+        }
     }
 
     private int GetBallCollideBoard(){
