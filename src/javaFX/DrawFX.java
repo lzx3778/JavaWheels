@@ -7,8 +7,8 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.effect.BlendMode;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
-import javafx.scene.shape.Rectangle;
+import javafx.scene.paint.PhongMaterial;
+import javafx.scene.shape.*;
 import javafx.stage.Stage;
 
 /**
@@ -55,6 +55,26 @@ public class DrawFX extends Application{
         g.getChildren().add(rect);
         g.getChildren().add(c);
 
+        final PhongMaterial redMaterial = new PhongMaterial();
+        redMaterial.setSpecularColor(Color.ORANGE);
+        redMaterial.setDiffuseColor(Color.RED);
+
+        final PhongMaterial blueMaterial = new PhongMaterial();
+        blueMaterial.setDiffuseColor(Color.BLUE);
+        blueMaterial.setSpecularColor(Color.LIGHTBLUE);
+
+        final PhongMaterial greyMaterial = new PhongMaterial();
+        greyMaterial.setDiffuseColor(Color.DARKGREY);
+        greyMaterial.setSpecularColor(Color.GREY);
+
+        final Box red = new Box(400, 400, 400);
+        red.setMaterial(redMaterial);
+
+        final Sphere blue = new Sphere(200);
+        blue.setMaterial(blueMaterial);
+
+        final Cylinder grey = new Cylinder(5, 100);
+        grey.setMaterial(greyMaterial);
         return g;
     }
 }
