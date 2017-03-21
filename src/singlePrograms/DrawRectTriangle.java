@@ -1,11 +1,15 @@
-package wheels.Graphic;
+package singlePrograms;
 
 import java.awt.Color;
 import java.awt.Graphics;
 import javax.swing.JFrame;
 
-public class Draw extends JFrame {
-	public Draw() {
+public class DrawRectTriangle extends JFrame {
+    public static void main(String[] args) {
+        DrawRectTriangle drawRectTriangle = new DrawRectTriangle();
+    }
+
+    public DrawRectTriangle() {
 		setVisible(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 50, 700, 700);

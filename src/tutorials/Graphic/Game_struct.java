@@ -1,4 +1,4 @@
-package wheels.Graphic;
+package tutorials.Graphic;
 
 import java.awt.Graphics;
 import javax.swing.JFrame;

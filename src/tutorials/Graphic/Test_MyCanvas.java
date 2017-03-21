@@ -1,4 +1,4 @@
-package wheels.Graphic;
+package tutorials.Graphic;
 
 import java.awt.Canvas;
 import java.awt.Frame;
@@ -57,22 +57,22 @@ public class Test_MyCanvas implements KeyListener, MouseInputListener {
 		c.requestFocus();
 	}
 
-	// Êó±ê½øÈë
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public void mouseEntered(java.awt.event.MouseEvent e) {
 		tf.setText("mouseEntered");
 	}
 
-	// Êó±êÍË³ö
+	// ï¿½ï¿½ï¿½ï¿½Ë³ï¿½
 	public void mouseExited(java.awt.event.MouseEvent e) {
 		tf.setText("mouseExited");
 	}
 
-	// Êó±ê°´ÏÂ
+	// ï¿½ï¿½ê°´ï¿½ï¿½
 	public void mousePressed(java.awt.event.MouseEvent e) {
 		tf.setText("mousePressed");
 	}
 
-	// Êó±êËÉ¿ª
+	// ï¿½ï¿½ï¿½ï¿½É¿ï¿½
 	public void mouseReleased(java.awt.event.MouseEvent e) {
 		tf.setText("mouseReleased");
 	}

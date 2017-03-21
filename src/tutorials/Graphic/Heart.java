@@ -1,10 +1,7 @@
-package wheels.Graphic;
+package tutorials.Graphic;
 
 import java.awt.*;
 
-import java.awt.geom.*;
-import java.lang.reflect.InvocationTargetException;
-import java.util.Timer;
 import javax.swing.*;
 
 public class Heart {

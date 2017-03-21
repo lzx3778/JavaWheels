@@ -1,4 +1,4 @@
-package wheels.Graphic;
+package tutorials;
 
 import java.awt.EventQueue;
 

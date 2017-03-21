@@ -1,11 +1,8 @@
-package wheels.Graphic;
+package tutorials.Graphic;
 
 import java.awt.Graphics;
-import java.util.Iterator;
 
 import javax.swing.JFrame;
-
-import com.sun.media.jfxmedia.events.NewFrameEvent;
 
 public class Wave extends JFrame implements Runnable {
 
