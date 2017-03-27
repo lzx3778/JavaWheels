@@ -1,4 +1,4 @@
-package singlePrograms;
+package tutorials.javaFX;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;
@@ -6,16 +6,8 @@ import javafx.geometry.VPos;
 import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.effect.BlendMode;
-import javafx.scene.effect.Bloom;
-import javafx.scene.effect.BoxBlur;
-import javafx.scene.effect.DropShadow;
-import javafx.scene.effect.GaussianBlur;
+import javafx.scene.effect.*;
 import javafx.scene.effect.Light.Distant;
-import javafx.scene.effect.Lighting;
-import javafx.scene.effect.MotionBlur;
-import javafx.scene.effect.PerspectiveTransform;
-import javafx.scene.effect.Reflection;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
@@ -32,26 +24,6 @@ public class HelloEffects extends Application{
     public static void main(String[] args) {
         launch(args);
 
-    }
-
-    @Override
-    public void start(Stage stage) throws Exception {
-        stage.show();
-        scene = new Scene(new Group(), 650, 300);
-        ObservableList<Node> content = ((Group)scene.getRoot()).getChildren();
-
-        content.add(blendMode());
-        content.add(bloom());
-        content.add(boxBlur());
-        content.add(motionBlur());
-        content.add(gaussianBlur());
-        content.add(dropShadow());
-        content.add(reflection());
-        content.add(lighting());
-        content.add(perspective());
-        content.add(chainEffects());
-
-        stage.setScene(scene);
     }
 
     static Node blendMode(){
@@ -277,5 +249,25 @@ public class HelloEffects extends Application{
         rect.setEffect(ds);
 
         return rect;
+    }
+
+    @Override
+    public void start(Stage stage) throws Exception {
+        stage.show();
+        scene = new Scene(new Group(), 650, 300);
+        ObservableList<Node> content = ((Group) scene.getRoot()).getChildren();
+
+        content.add(blendMode());
+        content.add(bloom());
+        content.add(boxBlur());
+        content.add(motionBlur());
+        content.add(gaussianBlur());
+        content.add(dropShadow());
+        content.add(reflection());
+        content.add(lighting());
+        content.add(perspective());
+        content.add(chainEffects());
+
+        stage.setScene(scene);
     }
 }

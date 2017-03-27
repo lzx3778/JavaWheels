@@ -1,4 +1,4 @@
-package javaFX;
+package tutorials.javaFX;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;
@@ -22,17 +22,6 @@ public class DrawFX extends Application{
     public static void main(String[] args) {
         launch(args);
 
-    }
-
-    @Override
-    public void start(Stage stage) throws Exception {
-        scene = new Scene(new Group(), 300, 300);
-        ObservableList<Node> content = ((Group)scene.getRoot()).getChildren();
-        stage.setScene(scene);
-
-        content.add(blendMode());
-
-        stage.show();
     }
 
     static Node blendMode(){
@@ -76,5 +65,16 @@ public class DrawFX extends Application{
         final Cylinder grey = new Cylinder(5, 100);
         grey.setMaterial(greyMaterial);
         return g;
+    }
+
+    @Override
+    public void start(Stage stage) throws Exception {
+        scene = new Scene(new Group(), 300, 300);
+        ObservableList<Node> content = ((Group) scene.getRoot()).getChildren();
+        stage.setScene(scene);
+
+        content.add(blendMode());
+
+        stage.show();
     }
 }
