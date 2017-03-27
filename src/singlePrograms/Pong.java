@@ -37,7 +37,7 @@ public class Pong extends JFrame implements Runnable{
 
         BallSizeX = 10;
         BallSizeY = 10;
-        BallSpeedX = 2;
+        BallSpeedX = 3;
         BallSpeedY = 4;
 
         BoardSizeX = 100;
@@ -46,7 +46,7 @@ public class Pong extends JFrame implements Runnable{
         B1CenterX = 150;
         B2CenterX = 150;
 
-        B1SpeedX = 4;
+        B1SpeedX = 2;
         B2SpeedX = 2;
 
         B1Score = 0;
@@ -124,6 +124,9 @@ public class Pong extends JFrame implements Runnable{
 //            B1SpeedX = 0 - B1SpeedX;
 //        }
 //        B1CenterX += B1SpeedX;
+        if(GetBoard1CollideWall()){
+            return;
+        }
         if (B1CenterX > BallCenterX + B1SpeedX / 2) {
             B1CenterX -= B1SpeedX;
             return;
@@ -176,9 +179,14 @@ public class Pong extends JFrame implements Runnable{
 
     private boolean GetBoard1CollideWall(){
         if((B1CenterX - BoardSizeX /2) <= 0){
+            B1CenterX += 1;
             return true;
         }
-        return (B1CenterX + BoardSizeX / 2) >= 300;
+        if((B1CenterX + BoardSizeX /2) >= 300){
+            B1CenterX -= 1;
+            return true;
+        }
+        return false;
     }
 
     private boolean GetBoard2CollideWall(){
